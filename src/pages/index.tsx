@@ -1,7 +1,11 @@
-import Head from "next/head";
-import Image from "next/image";
+import { NextPage } from 'next';
+import React from 'react';
+import HomePage from './home';
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
-	return <h1 className="btn btn-primary">Next js + TS + Bootstrap</h1>;
+
+const RootPage: NextPage = () => {
+  return <HomePage />;
 }
+
+export default RootPage

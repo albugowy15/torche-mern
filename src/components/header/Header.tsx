@@ -41,6 +41,7 @@ const Header = () => {
                             </ul>
                         </li>
                     </ul>
+                    <i className="bi bi-list mobile-nav-toggle"></i>
                 </nav>
             </div>
         </header>

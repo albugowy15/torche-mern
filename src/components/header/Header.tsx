@@ -1,10 +1,11 @@
 import Logo from "../../../public/assets/img/Torche_Logo-01_White.png";
 import Image from "next/image";
+import * as Icon from 'react-bootstrap-icons';
 
 const Header = () => {
 	return (
-		<header id="header" className=" d-flex align-items-center">
-			<div className="d-flex justify-content-between">
+		<header id="header">
+			<div className="d-flex justify-content-around">
 				<div className="logo">
 					<a href="https://torche.app">
 						<Image src={Logo} alt="test" />
@@ -40,7 +41,7 @@ const Header = () => {
 						</li>
 						<li className="dropdown">
 							<a className="nav-link scrollto" href="#">
-								<span>Kursus</span> <i className="bi bi-chevron-down"></i>
+								<span>Kursus</span> <i><Icon.ChevronDown/></i>
 							</a>
 							<ul>
 								<li>
@@ -56,7 +57,7 @@ const Header = () => {
 						</li>
 						<li className="dropdown">
 							<a className="nav-link scrollto" href="#">
-								<span>Apps</span> <i className="bi bi-chevron-down"></i>
+								<span>Apps</span> <i><Icon.ChevronDown/></i>
 							</a>
 							<ul>
 								<li>
@@ -69,7 +70,7 @@ const Header = () => {
 						</li>
 						<li className="dropdown">
 							<a href="#">
-								<i className="bi bi-globe2"></i>
+								<i><Icon.Globe/></i>
 							</a>
 							<ul>
 								<li>
@@ -83,7 +84,7 @@ const Header = () => {
 							</ul>
 						</li>
 					</ul>
-					<i className="bi bi-list mobile-nav-toggle"></i>
+					<i className="mobile-nav-toggle"><Icon.List/></i>
 				</nav>
 			</div>
 		</header>

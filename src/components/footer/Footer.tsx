@@ -1,7 +1,5 @@
-// import DcLogo from '../../../public/assets/img/icons8-discord.svg'
-// import LinkedInLogo from '../../../public/assets/img/icons8-linkedin.svg'
-// import InstaLogo from '../../../public/assets/img/icons8-instagram.svg'
-import Image from 'next/image'
+import Image from 'next/image';
+import * as Icon from 'react-bootstrap-icons';
 
 const Footer = () => {
     return ( 
@@ -35,24 +33,41 @@ const Footer = () => {
                             </p>
 
                             <div className="social-links">
-                                <a href="https://twitter.com/TorcheEdu" className="twitter"><i className="bi bi-twitter"></i></a>
-                                <a href="https://www.facebook.com/torche.edu" className="facebook"><i className="bi bi-facebook"></i></a>
+                                <a href="https://twitter.com/TorcheEdu" className="twitter">
+                                    <i><Icon.Twitter/></i>
+                                </a>
+
+                                <a href="https://www.facebook.com/torche.edu" className="facebook">
+                                    <i><Icon.Facebook/></i>
+                                </a>
+
                                 <a href="https://www.instagram.com/torche.app/" className="instagram">
-                                    {/* <Image src={InstaLogo} alt="logo discord"/> */}
-                                    <i className="bi bi-instagram"></i>
+                                    <i><Icon.Instagram/></i>
                                 </a>
-                                <a href="https://www.youtube.com/channel/UCQnYuE3KU3CzcAjVhuCQtNw" className="youtube"><i className="bi bi-youtube"></i></a>
+
+                                <a href="https://www.youtube.com/channel/UCQnYuE3KU3CzcAjVhuCQtNw" className="youtube">
+                                    <i><Icon.Youtube/></i>
+                                </a>
+
                                 <a href="https://www.linkedin.com/company/torche-education/" className="linkedin">
-                                    {/* <Image src={DcLogo} alt="logo discord"/> */}
-                                    <i className="bi bi-linkedin"></i>
+                                    <i><Icon.Discord/></i>
                                 </a>
-                                <a href="https://vt.tiktok.com/ZSeu2n4ca/" className="tiktok"><i className="bi bi-tiktok"></i></a>
+
+                                <a href="https://vt.tiktok.com/ZSeu2n4ca/" className="tiktok">
+                                    <i><Icon.Tiktok/></i>
+                                </a>
+
                                 <a href="https://discord.com/invite/2fYBrcK785" className="discord">
-                                    {/* <Image src={DcLogo} alt="logo discord"/> */}
-                                    <i className="bi bi-discord"></i>
+                                    <i><Icon.Discord/></i>
                                 </a>
-                                <a href="https://wa.me/+6285155216117" className="whatsapp"><i className="bi bi-whatsapp"></i></a>
-                                <a href="https://page.line.me/229wiguf" className="line"><i className="bi bi-line"></i></a>
+
+                                <a href="https://wa.me/+6285155216117" className="whatsapp">
+                                    <i><Icon.Whatsapp/></i>
+                                </a>
+
+                                <a href="https://page.line.me/229wiguf" className="line">
+                                    <i><Icon.Line/></i>
+                                </a>
                             </div>
                         </div>
                     </div>

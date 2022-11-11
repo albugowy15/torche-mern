@@ -71,6 +71,7 @@ h6 {
 }
 #header .logo img {
     padding: 0;
+    margin-left: 80px;
     max-height: 80px;
     max-width: 120px;
 }
@@ -82,9 +83,9 @@ h6 {
 # Navigation Home
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-
 .navbar {
     padding: 0;
+    margin-right:100px;
 }
 .navbar ul {
     margin: 0;
@@ -178,6 +179,7 @@ h6 {
         left: -100%;
     }
 }
+
 
 /* Mobile Navigation */
 .mobile-nav-toggle {
@@ -347,6 +349,7 @@ h6 {
 }
 #footer .footer-top .footer-links ul a {
     color: #ecf5ff;
+    text-decoration: none;
 }
 #footer .footer-top .footer-links ul a:hover {
     color: #74b5fc;
@@ -389,6 +392,7 @@ h6 {
 }
 #footer .credits a {
     color: #bfddfe;
+    text-decoration: none;
 }
 #footer .credits a:hover {
     color: #f1f7ff;

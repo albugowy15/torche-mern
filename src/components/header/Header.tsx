@@ -4,7 +4,7 @@ import * as Icon from 'react-bootstrap-icons';
 
 const Header = () => {
 	return (
-		<header id="header" className=" d-flex align-items-center">
+		<header id="header">
 			<div className="d-flex justify-content-between">
 				<div className="logo">
 					<a href="https://torche.app">
@@ -84,7 +84,7 @@ const Header = () => {
 							</ul>
 						</li>
 					</ul>
-					<i className="bi bi-list mobile-nav-toggle"></i>
+					<i className="mobile-nav-toggle"><Icon.List/></i>
 				</nav>
 			</div>
 		</header>

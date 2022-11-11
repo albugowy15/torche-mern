@@ -1,5 +1,6 @@
 import Logo from "../../../public/assets/img/Torche_Logo-01_White.png";
 import Image from "next/image";
+import * as Icon from 'react-bootstrap-icons';
 
 const Header = () => {
 	return (
@@ -69,7 +70,7 @@ const Header = () => {
 						</li>
 						<li className="dropdown">
 							<a href="#">
-								<i className="bi bi-globe2"></i>
+								<i><Icon.Globe/></i>
 							</a>
 							<ul>
 								<li>

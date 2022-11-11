@@ -5,7 +5,7 @@ import * as Icon from 'react-bootstrap-icons';
 const Header = () => {
 	return (
 		<header id="header">
-			<div className="d-flex justify-content-between">
+			<div className="d-flex justify-content-around">
 				<div className="logo">
 					<a href="https://torche.app">
 						<Image src={Logo} alt="test" />
@@ -41,7 +41,7 @@ const Header = () => {
 						</li>
 						<li className="dropdown">
 							<a className="nav-link scrollto" href="#">
-								<span>Kursus</span> <i className="bi bi-chevron-down"></i>
+								<span>Kursus</span> <i><Icon.ChevronDown/></i>
 							</a>
 							<ul>
 								<li>
@@ -57,7 +57,7 @@ const Header = () => {
 						</li>
 						<li className="dropdown">
 							<a className="nav-link scrollto" href="#">
-								<span>Apps</span> <i className="bi bi-chevron-down"></i>
+								<span>Apps</span> <i><Icon.ChevronDown/></i>
 							</a>
 							<ul>
 								<li>

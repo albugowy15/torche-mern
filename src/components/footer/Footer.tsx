@@ -1,7 +1,4 @@
-// import DcLogo from '../../../public/assets/img/icons8-discord.svg'
-// import LinkedInLogo from '../../../public/assets/img/icons8-linkedin.svg'
-// import InstaLogo from '../../../public/assets/img/icons8-instagram.svg'
-import Image from 'next/image'
+import Image from 'next/image';
 import * as Icon from 'react-bootstrap-icons';
 
 const Footer = () => {

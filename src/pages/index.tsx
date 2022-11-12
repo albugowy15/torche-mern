@@ -1,9 +1,3 @@
-import { NextPage } from "next";
-import React from "react";
-import HomePage from "./home";
+import HomePage from "@/modules/home/page/HomePage";
 
-const RootPage: NextPage = () => {
-	return <HomePage />;
-};
-
-export default RootPage;
+export default HomePage;

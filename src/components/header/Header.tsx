@@ -1,20 +1,22 @@
 import Logo from "../../../public/assets/img/Torche_Logo-01_White.png";
 import Image from "next/image";
+import * as Icon from "react-bootstrap-icons";
+import styles from "@/styles/Header.module.css";
 
 const Header = () => {
 	return (
-		<header id="header" className=" d-flex align-items-center">
-			<div className="d-flex justify-content-between">
-				<div className="logo">
+		<header id={styles.header}>
+			<div className="d-flex justify-content-around">
+				<div className={styles.logo}>
 					<a href="https://torche.app">
 						<Image src={Logo} alt="test" />
 					</a>
 				</div>
 
-				<nav id="navbar" className="navbar">
+				<nav id="navbar" className={styles.navbar}>
 					<ul>
 						<li>
-							<a className="nav-link scrollto active" href="https://torche.app">
+							<a className={`nav-link scrollto ${styles.active}`} href="https://torche.app">
 								Beranda
 							</a>
 						</li>
@@ -38,9 +40,12 @@ const Header = () => {
 								Event
 							</a>
 						</li>
-						<li className="dropdown">
+						<li className={styles.dropdown}>
 							<a className="nav-link scrollto" href="#">
-								<span>Kursus</span> <i className="bi bi-chevron-down"></i>
+								<span>Kursus</span>{" "}
+								<i>
+									<Icon.ChevronDown />
+								</i>
 							</a>
 							<ul>
 								<li>
@@ -54,9 +59,12 @@ const Header = () => {
 								</li>
 							</ul>
 						</li>
-						<li className="dropdown">
+						<li className={styles.dropdown}>
 							<a className="nav-link scrollto" href="#">
-								<span>Apps</span> <i className="bi bi-chevron-down"></i>
+								<span>Apps</span>{" "}
+								<i>
+									<Icon.ChevronDown />
+								</i>
 							</a>
 							<ul>
 								<li>
@@ -67,23 +75,27 @@ const Header = () => {
 						<li>
 							<a href="https://torche.app/careers">Karir</a>
 						</li>
-						<li className="dropdown">
+						<li className={styles.dropdown}>
 							<a href="#">
-								<i className="bi bi-globe2"></i>
+								<i>
+									<Icon.Globe />
+								</i>
 							</a>
 							<ul>
 								<li>
 									<a href="https://torche.app/en">English</a>
 								</li>
 								<li>
-									<a className="active" href="https://torche.app">
+									<a className={styles.active} href="https://torche.app">
 										Indonesia
 									</a>
 								</li>
 							</ul>
 						</li>
 					</ul>
-					<i className="bi bi-list mobile-nav-toggle"></i>
+					<i className={styles.mobileNavToggle}>
+						<Icon.List />
+					</i>
 				</nav>
 			</div>
 		</header>

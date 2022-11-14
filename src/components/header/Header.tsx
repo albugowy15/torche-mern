@@ -2,7 +2,7 @@ import Logo from "../../../public/assets/img/Torche_Logo-01_White.png";
 import Image from "next/image";
 import * as Icon from "react-bootstrap-icons";
 import styles from "@/styles/Header.module.css";
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import Link from 'next/link'
 import { useNavigate } from "react-router-dom";
 
@@ -14,6 +14,9 @@ const Header = () => {
 	// 	setToggle(!toggle);
 	// }
 
+	useEffect(() => {
+		require("bootstrap/dist/js/bootstrap.bundle.min.js");
+	},[])
 
 	return (
 		<header id={styles.header}>
@@ -86,13 +89,13 @@ const Header = () => {
 									<Link href="/en">English</Link>
 								</li>
 								<li>
-									<Link className={styles.active} href="/"></Link>
+									<Link className={styles.active} href="/">Indonesia</Link>
 								</li>
 							</ul>
 						</li>
 					</ul>
-					<div className={`dropdown navbarMobile ${styles.mobileNavToggle}`}>
-						<button className="">
+					<div className={`${styles.mobileNavToggle}`}>
+						<button className="mobileNavToggle navbarMobile ">
 							<Icon.List />
 						</button>
 					</div>

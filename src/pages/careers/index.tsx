@@ -1,13 +1,31 @@
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 import Image from 'next/image'
 import HeroImage from '../../../public/assets/img/carousel-1.webp'
 import styled from "styled-components";
 import { NextPage } from "next";
 import Link from 'next/link'
 import * as Icon from 'react-bootstrap-icons';
-import about1 from '../../../public/assets/img/about-1.webp'
-import about2 from '../../../public/assets/img/about-2.webp'
-import about4 from '../../../public/assets/img/about-4.webp'
-import aboutExtra from '../../../public/assets/img/about-extra-1.svg'
+import about1 from '../../../public/assets/img/Careers/about-1.webp'
+import about2 from '../../../public/assets/img/Careers/about-2.webp'
+import about3 from '../../../public/assets/img/Careers/about-3.webp'
+import about4 from '../../../public/assets/img/Careers/about-4.webp'
+import star  from '../../../public/assets/img/Careers/alotof-star.png'
+
+// Import gambar testi
+import renci from '../../../public/assets/img/testimonials/renci.webp'
+import wiwit from '../../../public/assets/img/testimonials/wiwit.webp'
+import adimas from '../../../public/assets/img/testimonials/adimas.webp'
+import joas from '../../../public/assets/img/testimonials/joas.webp'
+import feby from '../../../public/assets/img/testimonials/feby.webp'
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper";
 
 
 const  CareersPage: NextPage = () =>  {
@@ -70,10 +88,48 @@ const  CareersPage: NextPage = () =>  {
     }
   ]
 
+  const testi = [
+    {
+      icon: <Icon.Quote/>,
+      testi: 'Mulai dari CEO dan jajarannya merangkul kami semua tanpa membedakan tanpa menyalahkan kami apabila ada kesalahan yang dilakukan selama proses magang. CEO nya mampu menciptakan hubungan dan komunikasi serta kerja sama tim yang baik dalam mencapai target perusahaan.',
+      nama: 'Renci Gusri Solerena',
+      jabatan: 'Legal Office Intern',
+      photo: <Image src='/assets/img/testimonials/renci.webp' alt="renci" width={20} height={20}/>
+    },
+    {
+      icon: <Icon.Quote/>,
+      testi: 'Yang aku sukai adalah tim nya, jujur aku belum ada basic sama sekali dalam legal coorporate tapi ka renci dan ka ranti ngembimbing aku, dan ka leon ga marahin ga kalo aku ga paham.',
+      nama: 'Wiwit Purwoedi',
+      jabatan: 'Legal Office Intern',
+      photo: <Image src='/assets/img/testimonials/wiwit.webp' alt="wiwit" width={20} height={20}/>
+    },
+    {
+      icon: <Icon.Quote/>,
+      testi: 'Beberapa hal yang aku suka dari internship di Torche itu adalah kakak – kakak di Torche sangat ramah dan juga supportive. Sistem internnya juga tidak terlalu memberatkan intern (dari yang aku rasakan di comm dev).',
+      nama: 'Adimas Anugerah Rivandy',
+      jabatan: 'Marketing and Sales Intern',
+      photo: <Image src='/assets/img/testimonials/adimas.webp' alt="adimas" width={20} height={20}/>
+    },
+    {
+      icon: <Icon.Quote/>,
+      testi: 'Selama melakukan internship selama 3 bulan terdapat beberapa hal yang disukai selama pelaksanaan intern seperti pemberian job desc yang detail, didampingi oleh head dari divisi dengan baik dan responsive apabila terdapat pertanyaan, memiliki workload yang tidak melebihi dari kontrak, dan waktu intern yang tepat waktu.',
+      nama: 'Joas Kurnianto',
+      jabatan: 'Business Process Development Intern',
+      photo: <Image src='/assets/img/testimonials/joas.webp' alt="joas" width={20} height={20}/>
+    },
+    {
+      icon: <Icon.Quote/>,
+      testi: 'Yang saya sukai dari program internship ini adalah lingkungannya yang sangat friendly, baik dari C-Levelnya maupun Head nya sangat friendly kepada para intern. Selain itu juga cukup open pada internnya. Selain itu sistem dan waktu pengerjaan task nya sangat flexible, sehingga tidak membebankan intern.',
+      nama: 'Febby Pangestu Iskandar',
+      jabatan: 'Human Resources Intern',
+      photo: <Image src='/assets/img/testimonials/feby.webp' alt="feby" width={20} height={20}/>
+    }
+  ]
+
   return (
     /* header */
     <div className='pt-[80px]'>
-      <StyledDiv style={{backgroundImage: `url('/assets/img/carousel-1.webp')`}} className="w-full min-h-[300px] bg-cover bg-center bg-no-repeat relative">
+      <StyledDiv style={{backgroundImage: `url('/assets/img/Careers/carousel-1.webp')`}} className="w-full min-h-[300px] bg-cover bg-center bg-no-repeat relative">
         <div className='relative flex justify-center items-center'>
           <div className='w-[50%] pt-[90px] lg:mb-[10px]'>
             <h2 className='text-[28px] lg:text-[56px] text-center font-medium text-white'>Carrers</h2>
@@ -102,7 +158,7 @@ const  CareersPage: NextPage = () =>  {
                 return (
                   <div key={index} className="p-3 grid box-border">
                     <div className=' grid'>
-                      <a key={index} href={data.link} className='p-3 font-rajdhani shadow-lg rounded-lg no-underline border border-solid border-transparent'>
+                      <a key={index} href={data.link} className='p-3 font-rajdhani shadow-md rounded-lg no-underline border border-solid border-transparent'>
                           <svg viewBox="0 0 60 20">{data.icon}</svg>
                           <h3 className='text-black font-bold text-[20px]'>{data.title}</h3>
                           <h6>{data.vacancy}</h6>
@@ -116,12 +172,16 @@ const  CareersPage: NextPage = () =>  {
         {/*End Card*/}
 
         {/* Bagian Start Gambar dan Kickstart */}
-        <div className='flex px-24 py-16'>
+        <div className='flex px-24 pb-16 pt-[200px]'>
           <div className='flex-row'>
-            <Image className='rounded-tl-lg w-[306px] h-[306px]' src={about1} alt="logo"></Image>
-            <Image className='rounded-bl-lg w-[306px] h-[306px]' src={about4} alt="about 2"></Image>
-            <Image className='absolute z-20 -mt-[566px] h-[260px] ml-[306px] w-[260px]' src={about2} alt="about 3"></Image>
-            <Image className='h-[200px] w-[200px]' src={aboutExtra} alt="extra"></Image>
+            <div className='absolute -mt-[100px]'>
+              <Image className='rounded-tl-lg w-[306px] h-[306px]' src={about1} alt="about 1"></Image>
+              <Image className='rounded-bl-lg w-[260px] h-[260px] ml-[47px]' src={about3} alt="about 3"></Image>
+              <Image className='z-20 -mt-[520px] h-[260px] ml-[306px] w-[260px]' src={about2} alt="about 3"></Image>
+              <Image className=' ml-[307px] w-[306px] h-[306px]' src={about4} alt="about 4"></Image>
+            </div>
+            <Image className='mt-[136px]' src={star} alt="star"></Image>
+            <Image className='-mt-[614px] ml-[238px]' src={star} alt="star"></Image>
           </div>
           <div className='flex-col ml-[350px] mt-[150px] w-[600px] text-[#444444]'>
             <h1 className='text-[40px] font-bold mb-4'>Kickstart your career in the most renowned Ed-Tech in Indonesia!</h1>
@@ -144,9 +204,40 @@ const  CareersPage: NextPage = () =>  {
         </div>
       {/* Bagian End Gambar dan Kickstart */}
 
-      <div className='flex justify-center mb-5'>
+      {/* Bagian start swiper */}
+      <div className='flex justify-center pt-20 mb-5'>
         <h1 className='text-[#444444] font-bold text-[40px]'>Our Intern Say</h1>
       </div>
+
+      <div className="my-16 w-full px-48">
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
+      >
+        {
+          testi.map((data, index) => {
+            return(
+              <SwiperSlide key={index}>
+                <div className="flex flex-col m-14">
+                  <i className="text-blue-500 text-[48px] justify-start flex -mt-5 mb-3">{data.icon}</i>
+                  <p className="text-[16px] font-Cairo text-left w-full">{data.testi}</p>
+                  <i className="w-[100px] h-[100px]">{data.photo}</i>
+                </div>
+              </SwiperSlide>
+            )
+          })
+        }
+      </Swiper>
+    </div>
     </div>
   );
 }

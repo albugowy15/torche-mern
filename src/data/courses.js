@@ -1,4 +1,6 @@
-export const COURSESDATA = [
+import COURSES_IMAGES from "assets/courses";
+
+const COURSESDATA = [
     {
         "id": 1,
         "title": "Fundamentals of Calculus",
@@ -6,7 +8,7 @@ export const COURSESDATA = [
         "category": "basic engineering",
         "card_title": "Dasar-dasar Kalkulus", 
         "card_desc": "Mata kuliah ini membekali mahasiswa dengan pengetahuan matematika dan keterampilan analitik sehingga mampu menerapkan teknik kalkulus untuk memecahkan masalah ilmiah dan rekayasa.",
-        "image": "",
+        "image": COURSES_IMAGES.FUNDAMENTAL_CALCULUS,
         "rating": 9,
         "schedule": "Appointment with tutor(s)", 
         "desc": " This course is the series of University Calculus for science and engineering. It covers real number system, inequalities, functions and limits, derivatives, applications of derivatives, integrals, applications of integrals, transcendental functions, techniques of integration, indefinite forms, improper integrals, infinite series, 2D and 3D geometries, derivatives in Rn, double integrals, ordinary differential equations.",
@@ -493,5 +495,137 @@ export const COURSESDATA = [
                 "profile": ""
             }
         ]
+    },
+    {
+        "id": 8,
+        "title": "Fundamentals of Analytical Chemistry",
+        "slug": "fundamental-analytical-chemistry",
+        "category": "basic process engineering",
+        "card_title": "Dasar-dasar Kimia Analitik",
+        "card_desc": "Kursus ini mencakup dasar-dasar dan dasar-dasar kimia analitik dan instrumen, termasuk gravimetri, titrasi, elektrokimia, potensiometri, spektroskopi, dan kromatografi.",
+        "image": "",
+        "rating": 9,
+        "schedule": "Appointment with tutor(s)", 
+        "desc": " This course discuss Basic Measurement and Chemical Analysis, Classical Analysis methods include titration and gravimetry. Spectrochemical analysis include UV-VIS, FT-IR, AAS, and Chromatography Analysis. Material characterization include thermal analysis, material morphology. Instrumentation and Measurement includes measurements of pressure, flow rate, temperature, and thermal properties and fluid transport.",
+        "references": [`Skoog, D. A., West, D. M., Holler, F. J., & Crouch, S. R. (2014). Fundamentals of Analytical Chemistry (9th ed.). Brooks/Cole`], 
+        "content": [
+            {
+                "title": "Gravimetric Methods of Analysis",
+                "desc": "Gravimetry in this session includes materials about:",
+                "material": ["Precipitation Gravimetry", "Calculation of Results from Gravimetric Data", "Application of Gravimetric Methods"]
+            },
+            {
+                "title": "Titrations in Analytical Chemistry",
+                "desc": "The materials about tirations includes:",
+                "material": ["Terms in Volumetric Titrations", "Standard Solutions", "Volumetric Calculations", "Gravimetric Titrations", "Titration Curves"]
+            },
+            {
+                "title": "Neutralization Titration",
+                "desc": "This session discuss neutralization method in titration, which includes:",
+                "material": ["Solutions and Indicators for Acid/Base Titrations", "Titration of Strong Acids and Bases", "Titration Curves for Weak Acids", "Titration Curves for Weak Bases", "Composition of Solutions During Acid/Base Titrations"]
+            },
+            {
+                "title": "Electrochemical Methods",
+                "desc": "This session discuss electrochemistry reaction and the methods to analyze it, which includes:",
+                "material": ["Characterizing Oxidation/Reduction Reactions", "Electrochemical Cells", "Electrode Potentials", "Calculating Potentials of Electrochemical Cells"]
+            },
+            {
+                "title": "Potentiometry",
+                "desc": "This session discuss materials about potentiometry, which includes:",
+                "material": ["Principles of Potentiometry", "Reference Electrodes", "Liquid-Junction Potentials", "Indicator Electrodes", "Instruments for Measuring Cell Potentials", "Direct Potentiometry", "Potentiometric Titrations"]
+            },
+            {
+                "title": "Spectrochemical: Introduction",
+                "desc": "This session is an introduction to spectrochemical. which discuss:",
+                "material": ["Properties of Electromagnetic Radiation", "Interaction of Radiation and Matter", "Absorption of Radiation (Beer's Law)", "Emission of Electromagnetic Radiation"]
+            },
+            {
+                "title": "Spectrochemical: Optical Spectrometry",
+                "desc": "This sessions is the continuation of introduction to spectrochemical, which includes materials in:",
+                "material": ["Instrument Components of Optical Spectrometry", "Ultraviolet/Visible Photometers and Spectrophotometers", "Infrared Spectrophotometers"]
+            },
+            {
+                "title": "Molecular Absorption Spectrometry",
+                "desc": "This session explains more details in molecular absorption spectrometry, which includes:",
+                "material": ["Ultraviolet and Visible Molecular Absorption Spectroscopy", "Automated Photometric and Spectrophotometric Methods", "Infrared Absorption Spectroscopy"]
+            },
+            {
+                "title": "Atomic Spectroscopy",
+                "desc": "This session explains more details in atomic spectrometry, which includes:",
+                "material": ["Origins of Atomic Spectra", "Production of Atoms and Ions", "Atomic Emission Spectroscopy"]
+            },
+            {
+                "title": "Mass Spectroscopy",
+                "desc": "This session explains more details in mass spectrometry, which includes:",
+                "material": ["Principles of Mass Spectroscopy", "Mass Spectrometers", "Atomic Mass Spectrometry", "Molecular Mass Spectrometry"]
+            },
+            {
+                "title": "Gas Chromatography",
+                "desc": "This session discuss more details in gas Chromatography, which includes:",
+                "material": ["Instruments for Gas-Liquid Chromatography", "Gas Chromatography Columns and Stationary Phases", "Application of Gas-Liquid Chromatography", "Gas-Solid Chromatography"]
+            },
+            {
+                "title": "High Performance Liquid Chromatography (HPLC)",
+                "desc": "High Performane Liquid Chromatography discuss materials in:",
+                "material": ["Instrumentations", "Partition Chromatography", "Adsorption Chromatography", "Ion Chromatography", "Comparison of HPLC and Gas Chromatography"]
+            },
+        ],
+        "tutors": [
+            {
+                "name":"Sabtin Maulidiyah Hani", 
+                "profile": ""
+            }, 
+            {
+                "name": "Muhammad Arif Darmawan",
+                "profile": ""
+            }, 
+            {
+                "name": "Adam Aji Prayoga",
+                "profile": ""
+            }
+        ]
+    }, 
+    {
+        "id": 9,
+        "title": "Cell Culture for Engineers",
+        "slug": "cell-culture",
+        "category": "basic process engineering",
+        "card_title": "Kultur Sel untuk Insinyur",
+        "card_desc": "Mata kuliah kultur sel merupakan mata kuliah peminatan bagi para insinyur bioproses , yang meliputi mata kuliah kultur jaringan, kultur hewan, dan kultur sel bioproses.",
+        "image": "",
+        "rating": 9.8,
+        "schedule": "Appointment with tutor(s)", 
+        "desc": "This course provides the latest knowledge in the field of cell culture, cell culture principles and techniques, application of animal cell culture in bioindustry.",
+        "references": [`Invitrogen, G. (2014). Cell Culture Basics. Life technologies.`, `Dodds, J. H., & Roberts, L. W. (1985). Experiments in Plant Tissue Culture. International Potato Center.`, `Taji, A., Dodd, W. A., & Williams, R. R. (1992). Plant tissue culture practice. University of New England.`, `R. Ian Freshney (2010). Culture of Animal Cells: A Manual of Basic Technique and Specialized Applications. Wiley-Blackwell.`], 
+        "content": [
+            {
+                "title": "Tissue Culture",
+                "desc": "Tissue culture introduce students to cell and tissue culture for engineering. This session includes materials about:",
+                "material": ["Cell Culture", "Cell Culture Characteristics", "Type of Plant Tissue Culture", "Medium of Plant Tissue Culture", "Advantages and Uses", "Somatic Embryogenesis"]
+            },
+            {
+                "title": "Animal Culture",
+                "desc": "This session discuss basics in animal culture engineering. The materials discussed includes:",
+                "material": ["Animal Cell Culture", "Adherent and Non-adherent Cell", "Term in Animal Cells Culture", "Biosafety Level and Biosafety Cabinet", "Cell Counting Technique", "Population Doubling Level (PDL)"]
+            },
+            {
+                "title": "Cell Culture Contamination",
+                "desc": "Contamination in cell culture is commonly happened.To avoid this, engineers have to study about contaminatio, which includes:",
+                "material": ["Types of Contamination", "Effect of Contamination", "Prevention of Contamination", "Cryopreservation"]
+            },
+            {
+                "title": "Bioprocess Cell Culture",
+                "desc": "This session specialized in bioprocess engineering. The materials discussed includes:",
+                "material": ["Reactor and Bioreactor", "Aseptic and Non-aseptic Technique", "Batch, Continuous, and Semi-Continuous Bioreactor", "Mass Balances in Batch, Continuous, and Semi-Continuous Bioreactor", "Lighting, Aeration, and Temperature in Cell Culture"]
+            },
+        ],
+        "tutors": [
+            {
+                "name":"Amalia Weediyanti", 
+                "profile": ""
+            }
+        ]
     }
 ]
+
+export default COURSESDATA;

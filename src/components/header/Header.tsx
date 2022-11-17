@@ -10,16 +10,14 @@ import { useNavigate } from "react-router-dom";
 const Header = () => {
 
 	// const [toggle, setToggle] = useState(false);
-	// const klik = () => {
-	// 	setToggle(!toggle);
-	// }
+	// const klik = () =	// }
 
 	useEffect(() => {
 		require("bootstrap/dist/js/bootstrap.bundle.min.js");
 	},[])
 
 	return (
-		<header id={styles.header}>
+		<header id={styles.header} className="fixed w-full">
 			<div className="d-flex justify-content-around">
 				<div className={styles.logo}>
 						<Link href="/">

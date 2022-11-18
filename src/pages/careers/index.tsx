@@ -13,22 +13,25 @@ import about3 from '../../../public/assets/img/Careers/about-3.webp'
 import about4 from '../../../public/assets/img/Careers/about-4.webp'
 import star  from '../../../public/assets/img/Careers/alotof-star.png'
 
-// Import gambar testi
-import renci from '../../../public/assets/img/testimonials/renci.webp'
-import wiwit from '../../../public/assets/img/testimonials/wiwit.webp'
-import adimas from '../../../public/assets/img/testimonials/adimas.webp'
-import joas from '../../../public/assets/img/testimonials/joas.webp'
-import feby from '../../../public/assets/img/testimonials/feby.webp'
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
 
 
 const  CareersPage: NextPage = () =>  {
+
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index: number, className: string) {
+      return '<span class="' + className + '"></span>';
+    },
+  };
+
   const StyledDiv = styled.div`
   &:before{
     content: "";
@@ -37,6 +40,13 @@ const  CareersPage: NextPage = () =>  {
     inset: 0;
   }
   `
+  const StyledCard = styled.a`
+    box-shadow: 0 0 45px rgb(0 0 0 / 8%);
+    &:hover {
+      box-shadow: none;
+    }
+  `
+
   const job = [
     {
       title : 'Finance',
@@ -94,35 +104,35 @@ const  CareersPage: NextPage = () =>  {
       testi: 'Mulai dari CEO dan jajarannya merangkul kami semua tanpa membedakan tanpa menyalahkan kami apabila ada kesalahan yang dilakukan selama proses magang. CEO nya mampu menciptakan hubungan dan komunikasi serta kerja sama tim yang baik dalam mencapai target perusahaan.',
       nama: 'Renci Gusri Solerena',
       jabatan: 'Legal Office Intern',
-      photo: <Image src='/assets/img/testimonials/renci.webp' alt="renci" width={20} height={20}/>
+      photo: <Image src='/assets/img/testimonials/renci.webp' alt="renci" width={100} height={100}/>
     },
     {
       icon: <Icon.Quote/>,
       testi: 'Yang aku sukai adalah tim nya, jujur aku belum ada basic sama sekali dalam legal coorporate tapi ka renci dan ka ranti ngembimbing aku, dan ka leon ga marahin ga kalo aku ga paham.',
       nama: 'Wiwit Purwoedi',
       jabatan: 'Legal Office Intern',
-      photo: <Image src='/assets/img/testimonials/wiwit.webp' alt="wiwit" width={20} height={20}/>
+      photo: <Image src='/assets/img/testimonials/wiwit.webp' alt="wiwit" width={100} height={100}/>
     },
     {
       icon: <Icon.Quote/>,
       testi: 'Beberapa hal yang aku suka dari internship di Torche itu adalah kakak – kakak di Torche sangat ramah dan juga supportive. Sistem internnya juga tidak terlalu memberatkan intern (dari yang aku rasakan di comm dev).',
       nama: 'Adimas Anugerah Rivandy',
       jabatan: 'Marketing and Sales Intern',
-      photo: <Image src='/assets/img/testimonials/adimas.webp' alt="adimas" width={20} height={20}/>
+      photo: <Image src='/assets/img/testimonials/adimas.webp' alt="adimas" width={100} height={100}/>
     },
     {
       icon: <Icon.Quote/>,
       testi: 'Selama melakukan internship selama 3 bulan terdapat beberapa hal yang disukai selama pelaksanaan intern seperti pemberian job desc yang detail, didampingi oleh head dari divisi dengan baik dan responsive apabila terdapat pertanyaan, memiliki workload yang tidak melebihi dari kontrak, dan waktu intern yang tepat waktu.',
       nama: 'Joas Kurnianto',
       jabatan: 'Business Process Development Intern',
-      photo: <Image src='/assets/img/testimonials/joas.webp' alt="joas" width={20} height={20}/>
+      photo: <Image src='/assets/img/testimonials/joas.webp' alt="joas" width={100} height={100}/>
     },
     {
       icon: <Icon.Quote/>,
       testi: 'Yang saya sukai dari program internship ini adalah lingkungannya yang sangat friendly, baik dari C-Levelnya maupun Head nya sangat friendly kepada para intern. Selain itu juga cukup open pada internnya. Selain itu sistem dan waktu pengerjaan task nya sangat flexible, sehingga tidak membebankan intern.',
       nama: 'Febby Pangestu Iskandar',
       jabatan: 'Human Resources Intern',
-      photo: <Image src='/assets/img/testimonials/feby.webp' alt="feby" width={20} height={20}/>
+      photo: <Image src='/assets/img/testimonials/feby.webp' alt="feby" width={100} height={100}/>
     }
   ]
 
@@ -158,11 +168,11 @@ const  CareersPage: NextPage = () =>  {
                 return (
                   <div key={index} className="p-3 grid box-border">
                     <div className=' grid'>
-                      <a key={index} href={data.link} className='p-3 font-rajdhani shadow-md rounded-lg no-underline border border-solid border-transparent'>
-                          <svg viewBox="0 0 60 20">{data.icon}</svg>
+                      <StyledCard key={index} href={data.link} className='p-3 font-rajdhani transition duration-300 rounded-lg no-underline border border-solid border-transparent'>
+                          <svg viewBox="0 0 60 20" >{data.icon}</svg>
                           <h3 className='text-black font-bold text-[20px]'>{data.title}</h3>
                           <h6>{data.vacancy}</h6>
-                        </a>
+                        </StyledCard>
                     </div>
                   </div>
                 )
@@ -188,7 +198,7 @@ const  CareersPage: NextPage = () =>  {
             <p className='text-[16px] font-cairo mb-4 w-[650px]'>In Torche Education, We could help you develop your skill and learning based on experience. There are some benefits that you could get by working or taking internship in Torche:</p>
             <div className='text-[16px] font-cairo flex flex-col'>
               <div className='flex flex-row'>
-                <i className='text-blue-500 text-[30px] mr-5'><Icon.Check/></i>
+                <i className='text-blue-500 text-[30px] mr-5'></i>
                 <p className='mt-1'>Learning based on experience</p>
               </div>
               <div className='flex flex-row'>
@@ -217,9 +227,7 @@ const  CareersPage: NextPage = () =>  {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
+        pagination={pagination}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
@@ -227,10 +235,18 @@ const  CareersPage: NextPage = () =>  {
           testi.map((data, index) => {
             return(
               <SwiperSlide key={index}>
-                <div className="flex flex-col m-14">
-                  <i className="text-blue-500 text-[48px] justify-start flex -mt-5 mb-3">{data.icon}</i>
-                  <p className="text-[16px] font-Cairo text-left w-full">{data.testi}</p>
-                  <i className="w-[100px] h-[100px]">{data.photo}</i>
+                <div className="flex flex-col min-h-[200px] m-14 px-5 items-start">
+                  <div className="flex flex-col font-Rajdhani">
+                    <p className="text-blue-500 text-[48px] justify-start flex -mt-5 mb-3">{data.icon}</p>
+                    <p className="text-[16px] font-Cairo text-left w-full text-[#444444]">{data.testi}</p>
+                  </div>
+                  <div className="flex flex-row">
+                    <div className="max-w-full h-[50px] w-[50px] rounded-xl mt-3">{data.photo}</div>
+                    <div className="ml-5">
+                      <h4 className="text-[20px] mt-[13px] text-left text-[#444444] font-bold">{data.nama}</h4>
+                      <h4 className="text-[14px] mt-[10px] font-cairo text-left text-[#444444]">{data.jabatan}</h4>
+                    </div>
+                  </div>
                 </div>
               </SwiperSlide>
             )

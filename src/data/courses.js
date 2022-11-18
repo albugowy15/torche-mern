@@ -625,6 +625,62 @@ const COURSESDATA = [
                 "profile": ""
             }
         ]
+    }, 
+    {
+        "id": 10,
+        "title": "Chemical Engineering Thermodynamics",
+        "slug": "che-eng-thermodynamics",
+        "category": "basic process engineering",
+        "card_title": "Termodinamika Teknik Kimia",
+        "card_desc": "Mata kuliah ini mencakup mata kuliah termodinamika dasar, sifat ideal dan non ideal, siklus proses, kesetimbangan uap-cair, dan reaksi kesetimbangan kimia.",
+        "image": "",
+        "rating": 8.9,
+        "schedule": "Appointment with tutor(s)", 
+        "desc": "This course provides materials in: system, unit and definition; equations of state: ideal gas, virial and cubic equations; First Law and Second Law of Thermodynamics; closed and open system; Isothermal, isobaric, isometric, adiabatic, and mixing processes; Free energy; Properties of real fluids: calculation of change in internal energy, change in enthalpy, and change in entropy using thermodynamic diagrams, tables, and equations of state. Ideal gas flow systems: expansion, compression and throttling. Thermodynamic cycles; Solution properties: partial molar quantities, fugacity and activity; phase equilibrium criteria; ideal and non-ideal; Calculation of activity and fugacity coefficients: K-values; Equilibrium phase envelope for single and multi-component systems: definitions of critical point, cricondenterm, cricondenbar; Phase equilibrium calculations; Chemical reaction equilibrium criteria; Degree of reaction continuity; Chemical reaction equilibrium constant calculation for homogeneous & heterogeneous and homogeneous multiple reaction.",
+        "references": [`Smith, J. M., Van Ness, H. C., Abbott, M. M., & Swihart, M. T. (2018). Introduction to Chemical Engineering Thermodynamics (8th ed.). McGraw-Hill.`, `Geankoplis, C. J., Hersel, A. A., & Lepek, D. H. (2018). Transport Processes and Separation Process Principles (5th ed.). Prentice Hall.`, `Reklaitis, G. V., & Schneider, D. R. (1983). Introduction to Material and Energy Balances. John Wiley & Sons, Inc.`, `Moran, M. J., Shapiro, H. N., Boettner, D. D. & Bailey, M. B. (2011). Fundamentals of Engineering Thermodynamics (7th ed.). John Wiley & Sons, Inc.`], 
+        "content": [
+            {
+                "title": "PVT of A Pure Substance and Steam Table",
+                "desc": "Pressure-Volume-Temperature is the fundamentals in thermodynamics. While steam tables are needed to understand the properties of water in various pressure and temperature range. This session includes materials about:",
+                "material": ['PVT (Pressure-Volume-Temperature) Diagram', 'Steam Table', 'Volumetric Properties of The Fluid', 'Latent Heat and Vapor Pressure', 'Residual Functions']
+            },
+            {
+                "title": "1st Law of Thermodynamics",
+                "desc": "1st law of thermodynamics is the fundamentals in energy conservation. The materials discussed includes:",
+                "material": ['Basics Understanding of 1st law of Thermodynamics', 'Overall and Mechanical Energy Balance', 'Thermodynamics Process and Cycle for Ideal Gases', 'Heat Effects of Industrial Reactions', 'Theoretical Adiabatic Temperature']
+            },
+            {
+                "title": "2nd Law of Thermodynamics",
+                "desc": "2nd law of thermodynamics introduce the concept of entropy. The materials discussed includes:",
+                "material": ['Basics Understanding of 2nd law of Thermodynamics', 'Entropy Change for Ideal-Gas State', 'Entropy Balance for The Open System', 'Carnot Engine', 'Ideal and Lost Work']
+            },
+            {
+                "title": "Applications of Thermodynamics to The Process Engineering",
+                "desc": "Thermodynamics cycles and concepts in proess engineering will be discussed in this session, including:",
+                "material": ['Fluid-Moving Equipments', 'Production of Power from Heat', 'Refrigeration and Liquefaction']
+            },
+            {
+                "title": "Vapor-Liquid Equilibrium for Ideal Solutions",
+                "desc": "Vapor-Liquid equilibrium is the fundamentals concept in process engineering to understand separation concepts and other process engineering concepts. This session discuss materials:",
+                "material": ['Introduction to Vapour-Liquid Equilibrium', 'Raoult Law', 'K-Value Correlations', 'Henry Law for Non-Condensable Gases', 'Dewpoint and Bubblepoint Calculations', 'Flash Calculation', 'Azeotrope System Calculation']
+            },
+            {
+                "title": "Solution Thermodynamics",
+                "desc": "In solution thermodynamics, materials that will be discussed are:",
+                "material": ['Partial Molar Properties', 'Fugacity and Fugacity Coefficients: Theory and Calculations', 'Activity and Activity Coefficients: Theory and Calculations', 'Heat of Solution and Mixing']
+            },
+            {
+                "title": "Vapor-Liquid Equilibrium for Non-Ideal Solution",
+                "desc": "This sessions is the continuation of ideal vapour-liquid equilibrium session, which includes materials in:",
+                "material": ["Modified Raoult Law", "Dewpoint and Bubblepoint Calculations using Modified Raoult Law", "Flash Calculation using Modified Raoult Law", "Gamma-Phi Formulation"]
+            },
+            {
+                "title": "Chemical Reaction Equilibria",
+                "desc": "Chemical reaction in thermodynamics discuss the effect of thermodynamics to chemical reaction equilibrium. This session includes:",
+                "material": ["Introduction to Chemical Reaction Equilibria", "Reaction Coordinate and Equilibrium Conversion", "Le-Chatelier Principles", "Effect of Temperature on The Equilibrium Constant", "Relation of Equilibrium Constants to Composition", "Multireaction Equilibria", "Reactions in Heterogeneous Systems"]
+            },
+        ]
+
     }
 ]
 

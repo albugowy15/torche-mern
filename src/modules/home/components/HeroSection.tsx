@@ -1,6 +1,6 @@
 import Image from "next/image";
-import heroImage from "@/assets/hero-img.webp";
-import heroBg from "@/assets/hero-bg.webp";
+import heroImage from "@/assets/home/hero-img.webp";
+import heroBg from "@/assets/home/hero-bg.webp";
 
 export default function HeroSection() {
 	return (

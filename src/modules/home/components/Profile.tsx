@@ -1,7 +1,7 @@
-import aboutImg from "@/assets/about-img.svg";
+import aboutImg from "@/assets/home/about-img.svg";
 import Image from "next/image";
 import { CardChecklist, Check2, Wifi } from "react-bootstrap-icons";
-import qualityTutor from "@/assets/quality-tutor.webp";
+import qualityTutor from "@/assets/home/quality-tutor.webp";
 
 export default function Profile() {
 	return (

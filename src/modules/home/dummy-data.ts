@@ -1,4 +1,9 @@
-import { Easel2, People, PersonVideo3, Mortarboard, Pen, Book, Calendar4Week, CameraReels, ChatSquareText } from "react-bootstrap-icons";
+import { Easel2, People, PersonVideo3, Mortarboard, Pen, Book, Calendar4Week, CameraReels, ChatSquareText, Twitter, JournalAlbum, Linkedin, Instagram, Facebook } from "react-bootstrap-icons";
+
+import team1 from "@/assets/home/team-1.webp";
+import team2 from "@/assets/home/team-2.webp";
+import team3 from "@/assets/home/team-3.webp";
+import team4 from "@/assets/home/team-4.webp";
 
 export const ListServices = [
 	{
@@ -54,5 +59,84 @@ export const ListBenefits = [
 		icon: ChatSquareText,
 		title: "After-class Consultation",
 		description: "Berlaku selama 7 hari setelah kelas dengan bergabung ke server Discord kami.",
+	},
+];
+
+export const ListTeams = [
+	{
+		name: "M Yusuf Arya Ramadhan",
+		position: "CEO & CMO",
+		role: "Co-founder",
+		profilePic: team1,
+		social: [
+			{
+				Icon: Twitter,
+				url: "https://twitter.com/arya1302",
+			},
+			{
+				Icon: JournalAlbum,
+				url: "https://www.researchgate.net/profile/Muhammad-Ramadhan-27",
+			},
+			{
+				Icon: Instagram,
+				url: "https://www.instagram.com/ary.ramadhan/",
+			},
+			{
+				Icon: Linkedin,
+				url: "https://www.linkedin.com/in/arya-ramadhan/",
+			},
+		],
+	},
+	{
+		name: "Felix Pratama",
+		position: "COO",
+		role: "Co-founder",
+		profilePic: team2,
+		social: [
+			{
+				Icon: Instagram,
+				url: "https://www.instagram.com/lixpratama/",
+			},
+			{
+				Icon: Linkedin,
+				url: "https://www.linkedin.com/in/felix-pratama-257295112/",
+			},
+		],
+	},
+	{
+		name: "Leon Lukhas Santoso",
+		position: "CFO",
+		role: "Co-founder",
+		profilePic: team3,
+		social: [
+			{
+				Icon: Twitter,
+				url: "https://twitter.com/Leonsantoso",
+			},
+			{
+				Icon: Facebook,
+				url: "https://www.facebook.com/leon.santoso/",
+			},
+			{
+				Icon: Linkedin,
+				url: "https://www.linkedin.com/in/leon-santoso/",
+			},
+		],
+	},
+	{
+		name: "Sendy Winata",
+		position: "CHRO",
+		role: "Co-founder",
+		profilePic: team4,
+		social: [
+			{
+				Icon: Instagram,
+				url: "https://www.instagram.com/sendywee/?hl=en",
+			},
+			{
+				Icon: Linkedin,
+				url: "https://id.linkedin.com/in/sendy-winata-941265168",
+			},
+		],
 	},
 ];

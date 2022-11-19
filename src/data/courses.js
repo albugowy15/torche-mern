@@ -89,7 +89,7 @@ const COURSESDATA = [
         "category": "basic engineering",
         "card_title": "Dasar-dasar Fisika - Mekanika & Panas", 
         "card_desc": "Kursus ini memberikan pengantar fisika dasar untuk insinyur dan pengetahuan dan masalah dalam hukum gerak newton dan kekekalan energi.",
-        "image": "",
+        "image": COURSES_IMAGES.FUNDAMENTAL_PHYSICS_1,
         "rating": 8.7,
         "schedule": "Appointment with tutor(s)", 
         "desc": " This course is the first series of basics physics for engineers. This course covers materials of Mechanics (Kinematics, Dynamics, Work-Energy), Mechanical Wave, Fluid (Statics and Dynamics), and Thermophysics (Kinetic Theory of Gases and Thermodynamics).",
@@ -156,7 +156,7 @@ const COURSESDATA = [
         "category": "basic engineering",
         "card_title": "Dasar-dasar Fisika - Magnet, Listrik, Gelombang, Optik", 
         "card_desc": "Kursus ini memberikan fisika dasar untuk para insinyur dalam masalah magnet, listrik, gelombang, dan optik. Mata pelajaran termasuk fisika modern, elektromagnetik, dan cahaya akan dibahas.",
-        "image": "",
+        "image": COURSES_IMAGES.FUNDAMENTAL_PHYSICS_2,
         "rating": "",
         "schedule": "Appointment with tutor(s)", 
         "desc": " This course is the second series of basics physics for engineers. This course covers materials of Electrostatic (electric field, Coulomb Law) , Electric Potential Energy, Electrical Potential, Capacitor. Magnetostic, Electromotive force , Alternating Current, Electromagnetic Wave, Modern Physics, Atomic Physics.",
@@ -207,7 +207,7 @@ const COURSESDATA = [
         "category": "basic engineering",
         "card_title": "Dasar-dasar Kimia", 
         "card_desc": "Kursus ini akan memberikan dasar-dasar dan dasar-dasar kimia untuk memecahkan masalah umum di bidang teknik. Kursus ini mencakup mata pelajaran dalam reaksi kimia, termokimia, kesetimbangan kimia, elektrokimia, dan kinetika",
-        "image": "",
+        "image": COURSES_IMAGES.FUNDAMENTAL_CHEMISTRY,
         "rating": 8,
         "schedule": "Appointment with tutor(s)", 
         "desc": "This course studies the basic aspects in the application of chemical laws in the calculation of the composition of substances in samples and in various types of chemical reactions and studies the theories that underlie the development of atomic structures and molecular structures and interactions between molecules. This includes studies the energetics of solution formation and the effect of solute concentrations on the colligative properties of solutions, applying equilibrium concepts to explain acid-base and solubility equilibrium, studying feasibility of a process based on kinetics and thermodynamics point of views, and studying the application of nuclear and redox reactions as chemical energy sources, and study the structure and reactivity of organic compounds and biomolecules.",
@@ -296,7 +296,7 @@ const COURSESDATA = [
         "category": "basic engineering",
         "card_title": "Statistik dan Probabilitas", 
         "card_desc": "Kursus statistik dan probabilitas akan memperkenalkan dasar-dasar statistik untuk insinyur, tes statistik, dan probabilitas untuk memecahkan masalah umum dalam teknik dan kehidupan sehari-hari.",
-        "image": "",
+        "image": COURSES_IMAGES.STATISTICS_PROBABILITY,
         "rating": 8,
         "schedule": "Contact Us", 
         "desc": "This course discusses elementary concepts & methods in statistics (including big data) as tools for understanding the behavior of common engineering systems through measurement data & laboratory research, which encompass descriptive & inferential statistics, determination of correlation within data, & introduction to statistically designed experiments The session will discuss basic concepts & roles of statistics in engineering; organization & presentation of data; descriptive analysis of measurement data; principles of probability, random variables, & normal distribution; sampling distribution; confidence intervals of the mean & variance; hypothesis tests of one sample; comparison of two samples; 1-factor experiment & the ANOVA concept; introduction to factorial experiments; parameter estimation using linear regression",
@@ -317,7 +317,7 @@ const COURSESDATA = [
         "category": "basic engineering",
         "card_title": "Ekonomi Rekayasa", 
         "card_desc": "Kursus ekonomi teknik mencakup mata pelajaran termasuk nilai waktu uang, ROR, analisis biaya, pembiayaan proyek, dan analisis sensitivitas. Kursus ini juga memberikan masalah kehidupan nyata termasuk masalah ekonomi terkait industri.",
-        "image": "",
+        "image": COURSES_IMAGES.ENGINEERING_ECONOMY,
         "rating": 9.6,
         "schedule": "Appointment with tutor(s)", 
         "desc": "This course provides elementary knowledge & techniques in engineering economics as tools for the design & economic evaluation of engineering projects, such as cost estimation; operating expenses estimation; simple cashflow analysis; project cashflow analysis; project profitability & sensitivity evaluations; investment decision-making analysis. Materials include estimation of capital & operating expenses, cash flow planning, project profitability analysis, & elementary project planning & monitoring.",
@@ -392,12 +392,12 @@ const COURSESDATA = [
     }, 
     {
         "id": 7,
-        "title": "Organic Chemistry for Engineersy",
+        "title": "Organic Chemistry for Engineers",
         "slug": "organic-chemistry-engineers",
         "category": "basic engineering",
         "card_title": "Kimia Organik untuk Insinyur",
         "card_desc": "Kursus ini memperkenalkan dasar-dasar kimia organik dan aplikasi untuk insinyur proses. Topiknya meliputi isomer, stereokimia, hidrokarbon, dll. ",
-        "image": "",
+        "image": COURSES_IMAGES.ORGANIC_CHEMISTRY_ENGINEER,
         "rating": 8.9,
         "schedule": "Appointment with tutor(s)", 
         "desc": " Main topics of this course are concerning organic nomenclature, chemical bonding including resonance concept and acid-base concept, organic functional groups, and the relationship between structures of molecules, physical properties and chemical properties of organic compounds. The structure topics discuss on chemical bonding, covalent bond properties that related to the static aspect of molecules (including stereochemistry) as well as its dynamic aspect (conformation). The physical properties topic includes the state of materials, solubility, melting point and boiling points; the chemical properties topic includes acid-base properties, oxidation and reduction reaction, electrophylic and nucleophylic addition reaction, electrophylic and nucleophylic substitution reaction, elimination and free-radical reaction especially halogenation reaction. Other topics are concerning the application of organic chemistry knowledge in understanding of the application of organic compounds and reactions in living organism as well as in industrial applications.",
@@ -503,7 +503,7 @@ const COURSESDATA = [
         "category": "basic process engineering",
         "card_title": "Dasar-dasar Kimia Analitik",
         "card_desc": "Kursus ini mencakup dasar-dasar dan dasar-dasar kimia analitik dan instrumen, termasuk gravimetri, titrasi, elektrokimia, potensiometri, spektroskopi, dan kromatografi.",
-        "image": "",
+        "image": COURSES_IMAGES.ANALYTICAL_CHEMISTRY,
         "rating": 9,
         "schedule": "Appointment with tutor(s)", 
         "desc": " This course discuss Basic Measurement and Chemical Analysis, Classical Analysis methods include titration and gravimetry. Spectrochemical analysis include UV-VIS, FT-IR, AAS, and Chromatography Analysis. Material characterization include thermal analysis, material morphology. Instrumentation and Measurement includes measurements of pressure, flow rate, temperature, and thermal properties and fluid transport.",
@@ -592,7 +592,7 @@ const COURSESDATA = [
         "category": "basic process engineering",
         "card_title": "Kultur Sel untuk Insinyur",
         "card_desc": "Mata kuliah kultur sel merupakan mata kuliah peminatan bagi para insinyur bioproses , yang meliputi mata kuliah kultur jaringan, kultur hewan, dan kultur sel bioproses.",
-        "image": "",
+        "image": COURSES_IMAGES.CELL_CULTURE,
         "rating": 9.8,
         "schedule": "Appointment with tutor(s)", 
         "desc": "This course provides the latest knowledge in the field of cell culture, cell culture principles and techniques, application of animal cell culture in bioindustry.",
@@ -633,7 +633,7 @@ const COURSESDATA = [
         "category": "basic process engineering",
         "card_title": "Termodinamika Teknik Kimia",
         "card_desc": "Mata kuliah ini mencakup mata kuliah termodinamika dasar, sifat ideal dan non ideal, siklus proses, kesetimbangan uap-cair, dan reaksi kesetimbangan kimia.",
-        "image": "",
+        "image": COURSES_IMAGES.CHEMICAL_ENGINEERING_THERMODYNAMICS,
         "rating": 8.9,
         "schedule": "Appointment with tutor(s)", 
         "desc": "This course provides materials in: system, unit and definition; equations of state: ideal gas, virial and cubic equations; First Law and Second Law of Thermodynamics; closed and open system; Isothermal, isobaric, isometric, adiabatic, and mixing processes; Free energy; Properties of real fluids: calculation of change in internal energy, change in enthalpy, and change in entropy using thermodynamic diagrams, tables, and equations of state. Ideal gas flow systems: expansion, compression and throttling. Thermodynamic cycles; Solution properties: partial molar quantities, fugacity and activity; phase equilibrium criteria; ideal and non-ideal; Calculation of activity and fugacity coefficients: K-values; Equilibrium phase envelope for single and multi-component systems: definitions of critical point, cricondenterm, cricondenbar; Phase equilibrium calculations; Chemical reaction equilibrium criteria; Degree of reaction continuity; Chemical reaction equilibrium constant calculation for homogeneous & heterogeneous and homogeneous multiple reaction.",
@@ -679,6 +679,16 @@ const COURSESDATA = [
                 "desc": "Chemical reaction in thermodynamics discuss the effect of thermodynamics to chemical reaction equilibrium. This session includes:",
                 "material": ["Introduction to Chemical Reaction Equilibria", "Reaction Coordinate and Equilibrium Conversion", "Le-Chatelier Principles", "Effect of Temperature on The Equilibrium Constant", "Relation of Equilibrium Constants to Composition", "Multireaction Equilibria", "Reactions in Heterogeneous Systems"]
             },
+        ],
+        "tutors": [
+            {
+                "name":"Syahdan Amir Muhammad", 
+                "profile": ""
+            }, 
+            {
+                "name": "Samuel Pangeran Aletheia",
+                "profile": ""
+            }
         ]
 
     }

@@ -9,13 +9,13 @@ const CoursesCard = ({course}) => {
                     <p className='bg-[#f5faff] p-2 rounded font-bold mb-0'>{course.category}</p>
                     <p>{course.rating} / 10</p>
                   </div>
-                  <div className='p-2 pt-0'>
+                  <div className='p-2'>
                     <h4 className='font-bold'>{course.card_title}</h4>
                     <p className='text-[#777777]'>{course.card_desc}</p>
                   </div>
                 </div>
                 <div className='px-2.5 h-[40px] flex items-center border-t'>
-                  {course.tutors.length > 1 ? `${course.tutors.length} tutors` : `${course.tutors.length} tutor`}
+                  {course.tutors && course.tutors.length > 1 ? `${course.tutors.length} tutors` : `${course.tutors.length} tutor`}
                 </div>
               </div>
          </div>

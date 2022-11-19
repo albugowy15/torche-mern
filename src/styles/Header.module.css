@@ -146,9 +146,7 @@
 	display: none;
 	line-height: 0;
 	transition: 0.5s;
-}
-.mobileNavToggle.bi-x {
-	color: #fff;
+	margin-top : 20px;
 }
 
 @media (max-width: 991px) {

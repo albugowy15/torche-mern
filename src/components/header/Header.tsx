@@ -2,43 +2,44 @@ import Logo from "../../../public/assets/img/Torche_Logo-01_White.png";
 import Image from "next/image";
 import * as Icon from "react-bootstrap-icons";
 import styles from "@/styles/Header.module.css";
+import {useEffect, useState} from 'react';
+import Link from 'next/link'
+import { useNavigate } from "react-router-dom";
+
 
 const Header = () => {
+
+	// const [toggle, setToggle] = useState(false);
+	// const klik = () =	// }
+
+	useEffect(() => {
+		require("bootstrap/dist/js/bootstrap.bundle.min.js");
+	},[])
+
 	return (
-		<header id={styles.header}>
+		<header id={styles.header} className="fixed w-full">
 			<div className="d-flex justify-content-around">
 				<div className={styles.logo}>
-					<a href="https://torche.app">
-						<Image src={Logo} alt="test" />
-					</a>
+						<Link href="/">
+							<Image src={Logo} alt="test" />
+						</Link>
 				</div>
-
-				<nav id="navbar" className={styles.navbar}>
+				<nav id="navbar" className={`d-flex ${styles.navbar}`}>
 					<ul>
 						<li>
-							<a className={`nav-link scrollto ${styles.active}`} href="https://torche.app">
-								Beranda
-							</a>
+							<Link href="/" className={`nav-link scrollto ${styles.active}`}>Beranda</Link>
 						</li>
 						<li>
-							<a className="nav-link scrollto" href="https://torche.app/#about">
-								Tentang Kami
-							</a>
+							<Link className="nav-link scrollto" href="/#about">Tentang Kami</Link>
 						</li>
 						<li>
-							<a className="nav-link scrollto" href="https://torche.app/#services">
-								Layanan
-							</a>
+							<Link className="nav-link scrollto" href="/#services">Layanan</Link>
 						</li>
 						<li>
-							<a className="nav-link scrollto" href="https://torche.app/tutors">
-								Tutor
-							</a>
+							<Link className="nav-link scrollto" href="/tutors">Tutor</Link>
 						</li>
 						<li>
-							<a className="nav-link scrollto" href="https://torche.app/events">
-								Event
-							</a>
+							<Link className="nav-link scrollto" href="/events">Event</Link>
 						</li>
 						<li className={styles.dropdown}>
 							<a className="nav-link scrollto" href="#">
@@ -49,13 +50,13 @@ const Header = () => {
 							</a>
 							<ul>
 								<li>
-									<a href="https://torche.app/courses">Mata Kuliah</a>
+									<Link href="/courses">Mata Kuliah</Link>
 								</li>
 								<li>
-									<a href="https://torche.app/registration">Mendaftar kelas</a>
+									<Link href="/registration">Mendaftar Kelas</Link>
 								</li>
 								<li>
-									<a href="https://torche.app/pricing">Harga</a>
+									<Link href="/pricing">Harga</Link>
 								</li>
 							</ul>
 						</li>
@@ -68,12 +69,12 @@ const Header = () => {
 							</a>
 							<ul>
 								<li>
-									<a href="https://torche.app/che-calculator">Web Calculator</a>
+									<Link href="/che-calculator">Web Calculator</Link>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<a href="https://torche.app/careers">Karir</a>
+							<Link href="/careers">Karir</Link>
 						</li>
 						<li className={styles.dropdown}>
 							<a href="#">
@@ -83,19 +84,19 @@ const Header = () => {
 							</a>
 							<ul>
 								<li>
-									<a href="https://torche.app/en">English</a>
+									<Link href="/en">English</Link>
 								</li>
 								<li>
-									<a className={styles.active} href="https://torche.app">
-										Indonesia
-									</a>
+									<Link className={styles.active} href="/">Indonesia</Link>
 								</li>
 							</ul>
 						</li>
 					</ul>
-					<i className={styles.mobileNavToggle}>
-						<Icon.List />
-					</i>
+					<div className={`${styles.mobileNavToggle}`}>
+						<button className="mobileNavToggle navbarMobile ">
+							<Icon.List />
+						</button>
+					</div>
 				</nav>
 			</div>
 		</header>

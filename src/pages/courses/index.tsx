@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import * as Icon from "react-bootstrap-icons";
 import COURSESDATA from '../../data/courses'
@@ -33,9 +33,13 @@ const  CoursesPage: NextPage = () =>  {
     }
   }
 
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [filterActive])
+
 
   return (
-    <div>
+    <div className='pb-5'>
       <div className='p-2.5 md:px-8 flex justify-between items-center bg-[#f5faff]'>
         <h3 className='mb-0'>Courses</h3>
         <div>Courses / Our Courses</div>
@@ -56,11 +60,29 @@ const  CoursesPage: NextPage = () =>  {
       </div>
       <div className='p-8 lg:p-16 lg:pt-8 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
         { query === "" ? (
-          handleFilter(coursesData) && handleFilter(coursesData).map((course) => (<CoursesCard key={course.id} course={course}/> ))
+          handleFilter(coursesData).slice(indexOfFirstPost, indexOfLastPost).map((course) => (<CoursesCard key={course.id} course={course}/> ))
         ) : ( 
-          search(handleFilter(coursesData)) && search(handleFilter(coursesData)).map((course) =>  (<CoursesCard key={course.id} course={course}/>))
+          search(handleFilter(coursesData)).map((course) =>  (<CoursesCard key={course.id} course={course}/>))
         )}
       </div>
+      <div className='flex items-center justify-center'>
+        <button
+          className="mx-5 disabled:cursor-not-allowed enabled:hover:text-[#5885E9]"
+          onClick={() => setCurrentPage(currentPage - 1)}
+          disabled={currentPage === 1 && true}
+        >
+              <Icon.ArrowLeft className='text-lg'/>
+        </button>
+        <p className='mb-0'>{currentPage}</p>
+        <button
+            className="mx-5 disabled:cursor-not-allowed enabled:hover:text-[#5885E9]"
+            onClick={() => setCurrentPage(currentPage + 1)}
+            disabled={currentPage === Math.ceil(handleFilter(coursesData).length / postsPerPage)}
+          >
+            <Icon.ArrowRight className='text-lg'/>
+          </button>
+      </div>
+
     </div>
   ) 
 }

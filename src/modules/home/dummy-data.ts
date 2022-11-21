@@ -5,6 +5,15 @@ import team2 from "@/assets/home/team-2.webp";
 import team3 from "@/assets/home/team-3.webp";
 import team4 from "@/assets/home/team-4.webp";
 
+import client1 from "@/assets/home/client-1.webp";
+import client2 from "@/assets/home/client-2.webp";
+import client3 from "@/assets/home/client-3.webp";
+import client4 from "@/assets/home/client-4.webp";
+import client5 from "@/assets/home/client-5.webp";
+import client6 from "@/assets/home/client-6.webp";
+import client7 from "@/assets/home/client-7.webp";
+import client8 from "@/assets/home/client-8.webp";
+
 export const ListServices = [
 	{
 		Icon: Easel2,
@@ -138,5 +147,40 @@ export const ListTeams = [
 				url: "https://id.linkedin.com/in/sendy-winata-941265168",
 			},
 		],
+	},
+];
+
+export const ListClients = [
+	{
+		name: "Universitas Indonesia",
+		image: client1,
+	},
+	{
+		name: "Institut Teknologi Bandung",
+		image: client2,
+	},
+	{
+		name: "Institut Teknologi Sepuluh Nopember",
+		image: client3,
+	},
+	{
+		name: "Wageningen University",
+		image: client4,
+	},
+	{
+		name: "Badan Koordinasi Kegiatan Mahasiswa Teknik Kimia Indonesia",
+		image: client5,
+	},
+	{
+		name: "Ikatan Mahasiswa Teknik Kimia Universitas Indonesia",
+		image: client6,
+	},
+	{
+		name: "Universitas Indonesia Student Chapter",
+		image: client7,
+	},
+	{
+		name: "American Institute of Chemical Engineering Universitas Indonesia Student Chapter",
+		image: client8,
 	},
 ];

@@ -1,101 +1,57 @@
 import Logo from "../../../public/assets/img/Torche_Logo-01_White.png";
 import Image from "next/image";
-import * as Icon from "react-bootstrap-icons";
-import styles from "@/styles/Header.module.css";
+import { Globe2 } from "react-bootstrap-icons";
+import Link from "next/link";
+import { ChevronDown } from "react-bootstrap-icons";
+
+const ListMenu = [
+	{ name: "Beranda", url: "/" },
+	{ name: "Tentang Kami", url: "/about" },
+	{ name: "Layanan", url: "/services" },
+	{ name: "Tutor", url: "/tutors" },
+	{ name: "Event", url: "/events" },
+	{
+		name: "Kursus",
+		sub: [
+			{ name: "Mata Kuliah", url: "/courses" },
+			{ name: "Mendaftar Kelas", url: "/register" },
+			{ name: "Harga", url: "/pricing" },
+		],
+	},
+	{ name: "Apps", sub: [{ name: "Web Calculator", url: "/calculator" }] },
+	{ name: "Karir", url: "/careers" },
+];
 
 const Header = () => {
 	return (
-		<header id={styles.header}>
-			<div className="d-flex justify-content-around">
-				<div className={styles.logo}>
-					<a href="https://torche.app">
-						<Image src={Logo} alt="test" />
-					</a>
-				</div>
-
-				<nav id="navbar" className={styles.navbar}>
-					<ul>
+		<header className=" bg-[#0b122a] drop-shadow-xl shadow-white text-white">
+			<div className="max-w-6xl flex justify-between items-center mx-auto">
+				<Image src={Logo} alt="Logo Torche" width={130} />
+				<nav>
+					<ul className="flex justify-around gap-8 font-light items-center">
+						{ListMenu.map((menu, index) => (
+							<li key={index} className="group relative">
+								<Link className="group-hover:text-blue-700 transition-colors duration-500" href={menu.url ? menu.url : ""}>
+									{menu.name}
+									{menu.sub && <ChevronDown className="inline-block ml-1" size={10} />}
+								</Link>
+								{menu.sub && (
+									<ul className="hidden group-hover:block absolute bg-[#0b122a] shadow-lg p-3 w-52 space-y-3 transition-all">
+										{menu.sub.map((item, index) => (
+											<li className="group-hover:block" key={index}>
+												<Link href={item.url}>{item.name}</Link>
+											</li>
+										))}
+									</ul>
+								)}
+							</li>
+						))}
 						<li>
-							<a className={`nav-link scrollto ${styles.active}`} href="https://torche.app">
-								Beranda
-							</a>
-						</li>
-						<li>
-							<a className="nav-link scrollto" href="https://torche.app/#about">
-								Tentang Kami
-							</a>
-						</li>
-						<li>
-							<a className="nav-link scrollto" href="https://torche.app/#services">
-								Layanan
-							</a>
-						</li>
-						<li>
-							<a className="nav-link scrollto" href="https://torche.app/tutors">
-								Tutor
-							</a>
-						</li>
-						<li>
-							<a className="nav-link scrollto" href="https://torche.app/events">
-								Event
-							</a>
-						</li>
-						<li className={styles.dropdown}>
-							<a className="nav-link scrollto" href="#">
-								<span>Kursus</span>{" "}
-								<i>
-									<Icon.ChevronDown />
-								</i>
-							</a>
-							<ul>
-								<li>
-									<a href="https://torche.app/courses">Mata Kuliah</a>
-								</li>
-								<li>
-									<a href="https://torche.app/registration">Mendaftar kelas</a>
-								</li>
-								<li>
-									<a href="https://torche.app/pricing">Harga</a>
-								</li>
-							</ul>
-						</li>
-						<li className={styles.dropdown}>
-							<a className="nav-link scrollto" href="#">
-								<span>Apps</span>{" "}
-								<i>
-									<Icon.ChevronDown />
-								</i>
-							</a>
-							<ul>
-								<li>
-									<a href="https://torche.app/che-calculator">Web Calculator</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a href="https://torche.app/careers">Karir</a>
-						</li>
-						<li className={styles.dropdown}>
-							<a href="#">
-								<i>
-									<Icon.Globe />
-								</i>
-							</a>
-							<ul>
-								<li>
-									<a href="https://torche.app/en">English</a>
-								</li>
-								<li>
-									<a className={styles.active} href="https://torche.app">
-										Indonesia
-									</a>
-								</li>
-							</ul>
+							<Link className="hover:text-blue-700 transition-colors duration-500" href="/">
+								<Globe2 />
+							</Link>
 						</li>
 					</ul>
-					<i className={styles.mobileNavToggle}>
-						<Icon.List />
-					</i>
 				</nav>
 			</div>
 		</header>

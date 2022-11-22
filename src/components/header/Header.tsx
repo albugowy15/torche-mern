@@ -17,7 +17,7 @@ const Header = () => {
 	},[])
 
 	return (
-		<header id={styles.header} className="">
+		<header id={styles.header} className="w-full">
 			<div className="d-flex justify-content-around">
 				<div className={styles.logo}>
 						<Link href="/">

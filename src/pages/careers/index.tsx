@@ -140,16 +140,16 @@ const  CareersPage: NextPage = () =>  {
         <div className='relative flex justify-center'>
           <div className='sm:pt-[90px]'>
             <h2 className='text-[28px] sm:text-[56px] text-center font-medium text-white'>Carrers</h2>
-            <p className='text-center sm:text-[16px] sm:w-[500px] md:w-[696px] text-[#ffffffcc]'>Torche Education is open for various internship positions for students and freshgraduates to feel working environtment at startup company.</p>
+            <p className='text-center sm:text-[16px] sm:w-[500px] md:w-[696px] lg:w-[456px] text-[#ffffffcc]'>Torche Education is open for various internship positions for students and freshgraduates to feel working environtment at startup company.</p>
           </div>
         </div>
       </StyledDiv>
     
-      <div className="lg:w-full flex bg-[#f5faff]">
-        <div className='flex sm:flex-col lg:flex-row sm:ml-[50px] lg:justify-between p-[15px]'>
+      <div className="lg:w-full bg-[#f5faff]">
+        <div className='sm:ml-[40px] md:ml-[20px] xl:ml-[80px] sm:flex-col lg:flex-row lg:justify-between flex p-[15px]'>
           <h2 className='text-[24px] text-[#444444] font-light font-Radhjani'>Torche&apos;s Careers</h2>
           <ol>
-            <li className='font-Cairo sm:-ml-[30px]  text-[14px]'>Careers</li>
+            <li className='font-Cairo sm:-ml-[30px] lg:mr-[50px] text-[14px]'>Careers</li>
           </ol>
         </div>
       </div>
@@ -157,9 +157,9 @@ const  CareersPage: NextPage = () =>  {
 
       {/* Card */}
       <div className='py-5'>
-        <h1 className='text-center mb-2 font-rajdhani font-bold text-[40px] text-[#444444]'>Explore By Category</h1>
+        <h1 className='text-center mb-2 font-rajdhani font-bold sm:text-[31.6px] md:text-[33.52px] lg:text-[40px] flex justify-center text-[#444444]'>Explore By Category</h1>
       </div>
-      <div className='grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 md:px-5 sm:px-9 content-center'>
+      <div className='grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 md:px-[20px] xl:px-[80px] sm:px-9 content-center'>
           {
             job.map((data, index)=> {
                 return (
@@ -179,19 +179,19 @@ const  CareersPage: NextPage = () =>  {
         {/*End Card*/}
 
         {/* Bagian Start Gambar dan Kickstart */}
-        <div className='flex sm:flex-col lg:flex-row sm:pl-[60px] md:pl-[40px] pb-16 sm:pt-[70px]'>
-          <div className='items-center'>
-              <div className="flex sm:flex-col text-[#444444]">
-                <Image className='rounded-tl-lg sm:w-[258px] md:w-[348px]' src={about1} alt="about 1"></Image>
-                <Image className='rounded-bl-lg z-20 relative sm:w-[219.3px]  md:w-[295.8px] sm:ml-[40px] md:ml-[50px]' src={about3} alt="about 3"></Image>
-                <Image className='sm:w-[219.3px] md:w-[295.8px] z-20 relative sm:ml-[258px] md:ml-[348px] md:-mt-[591.5px] sm:-mt-[439px]' src={about2} alt="about 2"></Image>
-                <Image className='sm:w-[258px] sm:ml-[258px] md:w-[348px] md:ml-[346px]' src={about4} alt="about 4"></Image>
-                <Image className='sm:w-[258px] sm:-mt-[518px] md:w-[348px] sm:ml-[258px] md:-mt-[696px] md:ml-[347px]' src={star} alt="star"></Image>
-                <Image className='sm:w-[258px] sm:mt-[3px] md:w-[348px]' src={star} alt="star"></Image>
-
-                <div className="flex sm:flex-col lg:flex-row">
-                  <h1 className='sm:text-[31.6px] sm:w-[516px] md:w-[650px] sm:mt-7 font-bold mb-4'>Kickstart your career in the most renowned Ed-Tech in Indonesia!</h1>
-                  <p className='sm:text-[16px] font-cairo sm:w-[516px] md:w-[650px] mb-4'>In Torche Education, We could help you develop your skill and learning based on experience. There are some benefits that you could get by working or taking internship in Torche:</p>
+        <div className='sm:pl-[60px] lg:pl-[90px] w-full flex md:pl-[40px] pb-16 sm:pt-[70px]'>
+          <div className='flex sm:flex-col lg:flex-row'>
+            <div className="flex sm:flex-col text-[#444444]">
+                <Image className='rounded-tl-lg sm:w-[258px] xl:w-[306px] md:w-[348px] lg:w-[222px]' src={about1} alt="about 1"></Image>
+                <Image className='rounded-bl-lg z-20 relative sm:w-[219.3px] xl:w-[260px] md:w-[295.8px] sm:ml-[40px] md:ml-[50px] lg:w-[188.7px] lg:-mt-[1px] lg:ml-[34px] xl:-mt-[1px] xl:ml-[45px]' src={about3} alt="about 3"></Image>
+                <Image className='sm:w-[219.3px] md:w-[295.8px] z-20 relative xl:-mt-[519.8px] xl:w-[260px] sm:ml-[258px] md:ml-[348px] md:-mt-[591.5px] lg:-mt-[377.5px] lg:ml-[222px] lg:w-[188.7px] sm:-mt-[439px] xl:ml-[305px]' src={about2} alt="about 2"></Image>
+                <Image className='sm:w-[258px] sm:ml-[258px] md:w-[348px] xl:w-[306px] md:ml-[346px] lg:w-[222px] lg:ml-[221px] xl:ml-[305px]' src={about4} alt="about 4"></Image>
+                <Image className='sm:w-[258px] xl:-mt-[612px] xl:ml-[305px] sm:-mt-[518px] lg:-mt-[445px] xl:w-[306px] lg:ml-[222px] md:w-[348px] lg:w-[222px] sm:ml-[258px] md:-mt-[696px] md:ml-[347px]' src={star} alt="star"></Image>
+                <Image className='sm:w-[258px] sm:mt-[3px] md:w-[348px] lg:w-[222px] xl:w-[306px]' src={star} alt="star"></Image>
+            </div>
+                <div className="flex lg:-mt-[20px] xl:mt-[120px] lg:ml-[50px] text-[#444444] lg:mb-[50px] flex-col">
+                  <h1 className='sm:text-[31.6px] lg:text-[37.6px] xl:text-[40px] sm:w-[516px] lg:w-[444px] md:w-[650px] xl:w-[612px] sm:mt-7 font-bold mb-4'>Kickstart your career in the most renowned Ed-Tech in Indonesia!</h1>
+                  <p className='sm:text-[16px] font-cairo sm:w-[516px] lg:w-[444px] md:w-[650px] xl:w-[612px] mb-4'>In Torche Education, We could help you develop your skill and learning based on experience. There are some benefits that you could get by working or taking internship in Torche:</p>
                   <div className='text-[16px] font-cairo flex flex-col'>
                     <div className='flex flex-row'>
                       <i className='text-blue-500 sm:text-[24px] mr-5'><Icon.Check/></i>
@@ -205,7 +205,6 @@ const  CareersPage: NextPage = () =>  {
                       <i className='text-blue-500 sm:text-[24px] mr-5'><Icon.Check/></i>
                       <p className='mt-1 sm:text-[16px'>Flexible working hours</p>
                     </div>
-                </div>
               </div>
             </div>
           </div>
@@ -213,11 +212,11 @@ const  CareersPage: NextPage = () =>  {
       {/* Bagian End Gambar dan Kickstart */}
 
       {/* Bagian start swiper */}
-      <div className='flex justify-center mb-5'>
-        <h1 className='text-[#444444] font-bold sm:text-[31.6px]'>Our Intern Say</h1>
+      <div className='mb-5 flex justify-center'>
+        <h1 className='text-[#444444] font-bold lg:text-[37.36px] sm:text-[31.6px]'>Our Intern Say</h1>
       </div>
 
-      <div className="w-full sm:px-10 sm:mb-[50px] px-48">
+      <div className="sm:px-10 lg:px-20 sm:mb-[50px] ">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

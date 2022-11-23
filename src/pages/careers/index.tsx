@@ -1,6 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+// Import AOS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Image from 'next/image'
 import HeroImage from '../../../public/assets/img/carousel-1.webp'
 import styled from "styled-components";
@@ -24,6 +27,10 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 
 const  CareersPage: NextPage = () =>  {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
 
   const pagination = {
     clickable: true,
@@ -156,14 +163,15 @@ const  CareersPage: NextPage = () =>  {
       {/* End header */}
 
       {/* Card */}
+      <div data-aos="fade-up">
       <div className='py-5'>
-        <h1 className='text-center mb-2 font-rajdhani font-bold sm:text-[31.6px] md:text-[33.52px] lg:text-[40px] flex justify-center text-[#444444]'>Explore By Category</h1>
+        <h1 className='text-center mb-2 font-rajdhani font-bold sm:text-[31.6px] md:text-[33.52px] lg:text-[40px] flex justify-center text-[#444444]' data-wow-delay="0.1s">Explore By Category</h1>
       </div>
       <div className='grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 md:px-[20px] xl:px-[80px] sm:px-9 content-center'>
           {
             job.map((data, index)=> {
                 return (
-                  <div key={index} className="p-3 grid box-border">
+                  <div key={index} className="p-3 grid box-border" data-wow-delay="0.3s">
                     <div className=' grid'>
                       <StyledCard key={index} href={data.link} className='p-3 font-rajdhani transition duration-300 rounded-lg no-underline border border-solid border-transparent'>
                           <svg viewBox="0 0 80 20" >{data.icon}</svg>
@@ -176,10 +184,11 @@ const  CareersPage: NextPage = () =>  {
               })
             }
         </div>
+      </div>
         {/*End Card*/}
 
         {/* Bagian Start Gambar dan Kickstart */}
-        <div className='sm:pl-[60px] lg:pl-[90px] w-full flex md:pl-[40px] pb-16 sm:pt-[70px]'>
+        <div className='sm:pl-[60px] lg:pl-[90px] w-full flex md:pl-[40px] pb-16 sm:pt-[70px]'  data-aos="fade-up">
           <div className='flex sm:flex-col lg:flex-row'>
             <div className="flex sm:flex-col text-[#444444]">
                 <Image className='rounded-tl-lg sm:w-[258px] xl:w-[306px] md:w-[348px] lg:w-[222px]' src={about1} alt="about 1"></Image>
@@ -212,6 +221,7 @@ const  CareersPage: NextPage = () =>  {
       {/* Bagian End Gambar dan Kickstart */}
 
       {/* Bagian start swiper */}
+      <div data-aos="fade-up">
       <div className='mb-5 flex justify-center'>
         <h1 className='text-[#444444] font-bold lg:text-[37.36px] sm:text-[31.6px]'>Our Intern Say</h1>
       </div>
@@ -249,9 +259,10 @@ const  CareersPage: NextPage = () =>  {
             )
           })
         }
-      </Swiper>
+        </Swiper>
+      </div>
     </div>
-    </div>
+  </div>
   );
 }
 

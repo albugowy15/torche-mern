@@ -1,8 +1,3 @@
-import { NextPage } from 'next';
-import React from 'react';
+import TutorPage from "@/modules/tutor/page/TutorPage";
 
-const  TutorsPage: NextPage = () =>  {
-  return <div>This is Tutor Page</div>;
-}
-
-export default TutorsPage
+export default TutorPage;

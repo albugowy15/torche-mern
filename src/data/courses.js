@@ -78,7 +78,8 @@ const COURSESDATA = [
         "tutors": [
             {
                 "name": "Samuel Pangeran Aletheia", 
-                "profile": ""
+                "profile": "",
+                "slug": "samuel-pangeran-aletheia"
             }
         ]
     },
@@ -145,7 +146,8 @@ const COURSESDATA = [
         "tutors": [
             {
                 "name": "Samuel Pangeran Aletheia", 
-                "profile": ""
+                "profile": "",
+                "slug": "samuel-pangeran-aletheia"
             }
         ]
     }, 
@@ -196,7 +198,8 @@ const COURSESDATA = [
         "tutors": [
             {
                 "name": "Samuel Pangeran Aletheia", 
-                "profile": ""
+                "profile": "",
+                "slug": "samuel-pangeran-aletheia"
             }
         ]
     }, 
@@ -277,15 +280,18 @@ const COURSESDATA = [
         "tutors": [
             {
                 "name": "Ajeng Triane Syawalia", 
-                "profile": ""
+                "profile": "",
+                "slug": "ajeng-triane-syawalia"
             }, 
             {
                 "name": "Adam Aji Prayoga",
-                "profile": ""
+                "profile": "",
+                "slug": "adam-aji-prayoga"
             }, 
             {
                 "name": 'Sabtin Maulidiyah Hani', 
-                "profile": ""
+                "profile": "",
+                "slug": "sabtin-maulidiyah-hani"
             }
         ]
     }, 
@@ -305,7 +311,8 @@ const COURSESDATA = [
         "tutors": [
             {
                 "name": "Esterlita Makaria Aritonang", 
-                "profile": ""
+                "profile": "",
+                "slug": "esterlita-makaria-aritonang"
             }
         ]
     },
@@ -382,11 +389,13 @@ const COURSESDATA = [
         "tutors": [
             {
                 "name": "Muhammad Yusuf Arya Ramadhan",
-                "profile": ""
+                "profile": "",
+                "slug": "muhammad-yusuf-arya-ramadhan"
             },
             {
                 "name": "Esterlita Makaria Aritonang",
-                "profile": ""
+                "profile": "",
+                "slug": "esterlita-makaria-aritonang"
             }
         ]
     }, 
@@ -488,11 +497,13 @@ const COURSESDATA = [
         "tutors": [
             {
                 "name":"Muhammad Arif Darmawan", 
-                "profile": ""
+                "profile": "",
+                "slug": "muhammad-arif-darmawan"
             }, 
             {
                 "name": "Ajeng Triane Syawalia",
-                "profile": ""
+                "profile": "",
+                "slug": "ajeng-triane-syawalia"
             }
         ]
     },
@@ -573,15 +584,19 @@ const COURSESDATA = [
         "tutors": [
             {
                 "name":"Sabtin Maulidiyah Hani", 
-                "profile": ""
+                "profile": "",
+                "slug": "sabtin-maulidiyah-hani"
             }, 
             {
                 "name": "Muhammad Arif Darmawan",
-                "profile": ""
+                "profile": "",
+                "slug": "muhammad-arif-darmawan"
+
             }, 
             {
                 "name": "Adam Aji Prayoga",
-                "profile": ""
+                "profile": "",
+                "slug": "adam-aji-prayoga"
             }
         ]
     }, 
@@ -622,7 +637,8 @@ const COURSESDATA = [
         "tutors": [
             {
                 "name":"Amalia Weediyanti", 
-                "profile": ""
+                "profile": "",
+                "slug": "amalia-weediyanti"
             }
         ]
     }, 
@@ -683,11 +699,13 @@ const COURSESDATA = [
         "tutors": [
             {
                 "name":"Syahdan Amir Muhammad", 
-                "profile": ""
+                "profile": "",
+                "slug": "syahdan-amir-muhammad"
             }, 
             {
                 "name": "Samuel Pangeran Aletheia",
-                "profile": ""
+                "profile": "",
+                "slug": "samuel-pangeran-aletheia"
             }
         ]
 

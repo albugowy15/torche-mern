@@ -1,6 +1,8 @@
+import Router from 'next/router';
+
 const CoursesCard = ({course}) => {
     return (
-        <div key={course.id} className="w-full h-[530px] border rounded flex flex-col cursor-pointer hover:scale-[1.02] hover:shadow">
+        <div onClick={() => {Router.push(`/courses/${course.slug}`)}} key={course.id} className="w-full h-[530px] border rounded flex flex-col cursor-pointer hover:scale-[1.02] hover:shadow">
               <div className='w-full h-[200px] bg-cover bg-center rounded-tl rounded-tr' style={{backgroundImage: `url(${course.image.src})`}}></div>
               {/* <img src={course.image.src} alt="decoration"/> */}
               <div className='flex flex-col justify-between h-[330px]'>
